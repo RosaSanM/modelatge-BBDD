@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-03-2021 a las 12:02:59
+-- Tiempo de generación: 23-03-2021 a las 16:00:59
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.4.13
 
@@ -39,8 +39,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `email`, `password`) VALUES
 (1, 'email@email.com', 'password'),
-(2, 'email@email.com', 'password'),
-(3, 'email@email.com', 'password');
+(2, 'email@email.es', 'password'),
+(3, 'email@email.cat', 'password');
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,8 @@ INSERT INTO `video_list` (`id_list`, `id_user`, `id_video`, `identificator`) VAL
 -- Indices de la tabla `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indices de la tabla `video`

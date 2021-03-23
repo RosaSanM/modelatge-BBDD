@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-03-2021 a las 12:07:03
+-- Tiempo de generación: 23-03-2021 a las 15:59:33
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.4.13
 
@@ -72,7 +72,7 @@ CREATE TABLE `client` (
 INSERT INTO `client` (`id_client`, `name`, `adress`, `phone`, `mail`, `date`, `recomandation`) VALUES
 (1, 'pepi', 'calle coimnbra', '455454-44', 'mail@mail.com', '2021-03-23 11:20:03', NULL),
 (2, 'mari antonia', 'calle roger de flor 2', '23-2323', 'hola@mail.com', '2021-03-23 11:20:03', 'su prima'),
-(3, 'mari antoñi', 'plaza reial', '1213', 'mail@mail.com', '2021-03-23 11:20:40', 'un amigo');
+(3, 'mari antoñi', 'plaza reial', '1213', 'mail@mail.es', '2021-03-23 11:20:40', 'un amigo');
 
 -- --------------------------------------------------------
 
@@ -183,7 +183,8 @@ ALTER TABLE `brand`
 -- Indices de la tabla `client`
 --
 ALTER TABLE `client`
-  ADD PRIMARY KEY (`id_client`);
+  ADD PRIMARY KEY (`id_client`),
+  ADD UNIQUE KEY `mail` (`mail`);
 
 --
 -- Indices de la tabla `id_buyer`
@@ -195,7 +196,8 @@ ALTER TABLE `id_buyer`
 -- Indices de la tabla `provider`
 --
 ALTER TABLE `provider`
-  ADD PRIMARY KEY (`id_provider`);
+  ADD PRIMARY KEY (`id_provider`),
+  ADD UNIQUE KEY `nif` (`nif`);
 
 --
 -- Indices de la tabla `sale`

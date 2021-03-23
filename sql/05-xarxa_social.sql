@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-03-2021 a las 12:06:05
+-- Tiempo de generación: 23-03-2021 a las 16:00:18
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.4.13
 
@@ -86,10 +86,10 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `name`, `mail`, `pass`) VALUES
 (1, 'user1', 'mail@mail.com', '123'),
-(2, 'user2', 'mail@mail.com', 'contra'),
-(3, 'user3', 'mail@mail.com', 'hola'),
-(4, 'user4', 'mail@mail.com', 'contra123'),
-(5, 'user5', 'mail@mail.com', 'chao');
+(2, 'user2', 'mail@mail.es', 'contra'),
+(3, 'user3', 'mail@mail.de', 'hola'),
+(4, 'user4', 'mail@mail.cat', 'contra123'),
+(5, 'user5', 'mail@mail.pe', 'chao');
 
 --
 -- Índices para tablas volcadas
@@ -114,7 +114,8 @@ ALTER TABLE `photo`
 -- Indices de la tabla `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD UNIQUE KEY `mail` (`mail`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
